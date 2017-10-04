@@ -2,15 +2,36 @@
 <!doctype html>
 <html>
 <head>
-    <title>My Amazing HIT</title>
+    <title>Count the people in each image</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="mturk.js"></script>
     <script>
+
+
+
+        var keydowns = 0;   
+
         var numclicks = 0;
-        var keydowns = 0;
+        var numclicks2 = 0;
+        var numclicks3 = 0;
+        var numclicks4 = 0;
+        var numclicks5 = 0;
+        var numclicks6 = 0;
+        var numclicks7 = 0;
+
 
       var addedelements = [];
+      var addedelements2 = [];
+      var addedelements3 = [];
+      var addedelements4 = [];
+      var addedelements5 = [];
+      var addedelements6 = [];
+      var addedelements7 = [];
 
+
+
+
+// this code is for element 1------------------------------------------
         $(document).ready(function() {
             $("#theimage").click(function(e) {
           numclicks++;
@@ -43,6 +64,211 @@
             removeElement(elem2remove);
           }
             })
+ 
+ // this code is for image 2------------------------
+
+ $("#theimage2").click(function(e) {
+          numclicks2++;
+          $("#numberofpeople2").text(numclicks2);
+          $("#numberofpeoplefield2").val(numclicks2);
+
+          var newdomelement = $("<div class='marker'></div>");
+          newdomelement.css("left", (e.pageX-3) + "px");
+          newdomelement.css("top", (e.pageY-3) + "px");
+
+          var currhistory = $("#history").val();
+          currhistory += "|" + e.pageX + "," + e.pageY + "|";
+          $("#history").val(currhistory);
+
+          newdomelement.click(removeElementEvent2);
+
+          $("body").append(newdomelement);
+
+          // add to history
+          addedelements2.push(newdomelement);
+            })
+            $(document).keydown(function(e) {
+                keydowns++;
+                $("#numkeydowns").val(keydowns);
+
+          console.log(e);
+          newdomelement.click(removeElementEvent2);
+
+          if(e.key=="z" && e.ctrlKey) {
+            var elem2remove = addedelements2.pop();
+            removeElement2(elem2remove);
+          }
+            })
+
+//This code is for image 3 ------------------------------
+ $("#theimage3").click(function(e) {
+          numclicks3++;
+          $("#numberofpeople3").text(numclicks3);
+          $("#numberofpeoplefield3").val(numclicks3);
+
+          var newdomelement = $("<div class='marker'></div>");
+          newdomelement.css("left", (e.pageX-3) + "px");
+          newdomelement.css("top", (e.pageY-3) + "px");
+
+          var currhistory = $("#history").val();
+          currhistory += "|" + e.pageX + "," + e.pageY + "|";
+          $("#history").val(currhistory);
+
+          newdomelement.click(removeElementEvent3);
+
+          $("body").append(newdomelement);
+
+          // add to history
+          addedelements3.push(newdomelement);
+            })
+            $(document).keydown(function(e) {
+                keydowns++;
+                $("#numkeydowns").val(keydowns);
+
+          console.log(e);
+          newdomelement.click(removeElementEvent3);
+
+          if(e.key=="z" && e.ctrlKey) {
+            var elem2remove = addedelements3.pop();
+            removeElement3(elem2remove);
+          }
+            })
+
+//This code is for image 4 ------------------------------
+ $("#theimage4").click(function(e) {
+          numclicks4++;
+          $("#numberofpeople4").text(numclicks4);
+          $("#numberofpeoplefield4").val(numclicks4);
+
+          var newdomelement = $("<div class='marker'></div>");
+          newdomelement.css("left", (e.pageX-3) + "px");
+          newdomelement.css("top", (e.pageY-3) + "px");
+
+          var currhistory = $("#history").val();
+          currhistory += "|" + e.pageX + "," + e.pageY + "|";
+          $("#history").val(currhistory);
+
+          newdomelement.click(removeElementEvent4);
+
+          $("body").append(newdomelement);
+
+          // add to history
+          addedelements3.push(newdomelement);
+            })
+            $(document).keydown(function(e) {
+                keydowns++;
+                $("#numkeydowns").val(keydowns);
+
+          console.log(e);
+          newdomelement.click(removeElementEvent4);
+
+          if(e.key=="z" && e.ctrlKey) {
+            var elem2remove = addedelements4.pop();
+            removeElement4(elem2remove);
+          }
+            })
+
+//This code is for image 5 ------------------------------
+ $("#theimage5").click(function(e) {
+          numclicks5++;
+          $("#numberofpeople5").text(numclicks5);
+          $("#numberofpeoplefield5").val(numclicks5);
+
+          var newdomelement = $("<div class='marker'></div>");
+          newdomelement.css("left", (e.pageX-3) + "px");
+          newdomelement.css("top", (e.pageY-3) + "px");
+
+          var currhistory = $("#history").val();
+          currhistory += "|" + e.pageX + "," + e.pageY + "|";
+          $("#history").val(currhistory);
+
+          newdomelement.click(removeElementEvent5);
+
+          $("body").append(newdomelement);
+
+          // add to history
+          addedelements5.push(newdomelement);
+            })
+            $(document).keydown(function(e) {
+                keydowns++;
+                $("#numkeydowns").val(keydowns);
+
+          console.log(e);
+          newdomelement.click(removeElementEvent5);
+
+          if(e.key=="z" && e.ctrlKey) {
+            var elem2remove = addedelements5.pop();
+            removeElement5(elem2remove);
+          }
+            })
+
+//This code is for image 6 ------------------------------
+ $("#theimage6").click(function(e) {
+          numclicks6++;
+          $("#numberofpeople6").text(numclicks6);
+          $("#numberofpeoplefield6").val(numclicks6);
+
+          var newdomelement = $("<div class='marker'></div>");
+          newdomelement.css("left", (e.pageX-3) + "px");
+          newdomelement.css("top", (e.pageY-3) + "px");
+
+          var currhistory = $("#history").val();
+          currhistory += "|" + e.pageX + "," + e.pageY + "|";
+          $("#history").val(currhistory);
+
+          newdomelement.click(removeElementEvent6);
+
+          $("body").append(newdomelement);
+
+          // add to history
+          addedelements6.push(newdomelement);
+            })
+            $(document).keydown(function(e) {
+                keydowns++;
+                $("#numkeydowns").val(keydowns);
+
+          console.log(e);
+          newdomelement.click(removeElementEvent6);
+
+          if(e.key=="z" && e.ctrlKey) {
+            var elem2remove = addedelements6.pop();
+            removeElement6(elem2remove);
+          }
+            })
+
+//This code is for image 7 ------------------------------
+ $("#theimage7").click(function(e) {
+          numclicks7++;
+          $("#numberofpeople7").text(numclicks7);
+          $("#numberofpeoplefield7").val(numclicks7);
+
+          var newdomelement = $("<div class='marker'></div>");
+          newdomelement.css("left", (e.pageX-3) + "px");
+          newdomelement.css("top", (e.pageY-3) + "px");
+
+          var currhistory = $("#history").val();
+          currhistory += "|" + e.pageX + "," + e.pageY + "|";
+          $("#history").val(currhistory);
+
+          newdomelement.click(removeElementEvent7);
+
+          $("body").append(newdomelement);
+
+          // add to history
+          addedelements7.push(newdomelement);
+            })
+            $(document).keydown(function(e) {
+                keydowns++;
+                $("#numkeydowns").val(keydowns);
+
+          console.log(e);
+          newdomelement.click(removeElementEvent7);
+
+          if(e.key=="z" && e.ctrlKey) {
+            var elem2remove = addedelements7.pop();
+            removeElement7(elem2remove);
+          }
+            })
         })
 
       function removeElement(elem) {
@@ -56,10 +282,84 @@
       function removeElementEvent(e) {
         removeElement(this);
       }
+
+      function removeElement2(elem) {
+        $(elem).remove();
+
+        numclicks2--;
+        $("#numberofpeople2").text(numclicks2);
+        $("#numberofpeoplefield2").val(numclicks2);       
+      }
+
+            function removeElement3(elem) {
+        $(elem).remove();
+
+        numclicks3--;
+        $("#numberofpeople3").text(numclicks3);
+        $("#numberofpeoplefield3").val(numclicks3);       
+      }
+
+      function removeElementEvent3(e) {
+        removeElement3(this);
+      }
+
+
+      function removeElementEvent2(e) {
+        removeElement2(this);
+      }
+    
+      function removeElement4(elem) {
+        $(elem).remove();
+
+        numclicks4--;
+        $("#numberofpeople4").text(numclicks4);
+        $("#numberofpeoplefield4").val(numclicks4);       
+      }
+
+      function removeElementEvent4(e) {
+        removeElement4(this);
+      }
+        function removeElement5(elem) {
+        $(elem).remove();
+
+        numclicks5--;
+        $("#numberofpeople5").text(numclicks5);
+        $("#numberofpeoplefield5").val(numclicks5);       
+      }
+
+      function removeElementEvent5(e) {
+        removeElement5(this);
+      }
+
+      function removeElement6(elem) {
+        $(elem).remove();
+
+        numclicks6--;
+        $("#numberofpeople6").text(numclicks6);
+        $("#numberofpeoplefield6").val(numclicks6);       
+      }
+
+      function removeElementEvent6(e) {
+        removeElement6(this);
+      }
+
+      function removeElement7(elem) {
+        $(elem).remove();
+
+        numclicks7--;
+        $("#numberofpeople7").text(numclicks7);
+        $("#numberofpeoplefield7").val(numclicks7);       
+      }
+
+      function removeElementEvent7(e) {
+        removeElement7(this);
+      }
+
+
     </script>
   <style>
     .marker {
-      border: 2px solid red;
+      border: 2px solid white;
       border-radius: 5px;
       width: 2px;
       height: 2px;
@@ -71,21 +371,103 @@
 </head>
 <body>
 
-<h1>A test HIT</h1>
-
-<img id="theimage" src="https://lh4.googleusercontent.com/RrlsYOqwv_90Avm-U5D_qMf8aPKuORL291fD8Xlw3FArL-GZ9ijeMR65tZfEwqRF9OSHs5r0szGki8hX8ahCeB0cTcI0r0QUSZyPrtE18wn_3WMYgi3UlbRycRIFtO7SwrNBruA">
+<h1>Count the people in each image</h1>
 
 <p>
-You've selected <span id="numberofpeople">0</span> people.
+For each image below:
+Click each human person in the image. A person can be counted if 1/2 or more of their face/head is shown in the image. Do not count people twice in the case that their reflection is shown.
+
 </p>
+
+<p>
+For example:
+</p>
+
+<p>
+1. If you can see their nose and eyes, they can be counted
+</p>
+
+<p>
+2. If you can only see their arm, they are NOT counted
+</p>
+
+<p>
+3. If you can see the back of their head, they can be counted 
+</p>
+
+<!-- This code is image 1 -->
+<img id="theimage" src="https://lh5.googleusercontent.com/UHQoCsSgyHiT_L3CtbRH299KTEAgOQsF5C64rA3jph7pdq3GdXMcvkcqGv361aEIeFI6Nr7MBuVQD6cF6-fAsLIskE0A5A6iQiz4S3RMJRuTHu-g52q9UVSylgu9MC6U">
+
+<p>
+You've selected <span id="numberofpeople">0</span> people in the first image.
+</p>
+
+<!-- This code is image 2 -->
+
+<img id="theimage2" src="https://lh6.googleusercontent.com/7_WbZEKYJWzabnHY4Ahm9nirTL7B1GzCS0yj47RUlRD4hsOn40ukc3CtVK_OU80rYDCWL_tlvUOYdFyK1TbOcFi4QoM5_g_KTWJ_5PaNpjNRk4XURxGmkZnZszUj0IHc">
+
+<p>
+You've selected <span id="numberofpeople2">0</span> people in the second image.
+</p>
+
+<!-- This code is image 3 -->
+
+<img id="theimage3" src="https://lh5.googleusercontent.com/MWMl0n6oze9DSHWY0LxIAV2nYwGusrYBxjA05-CqTP3-i1rAdbnUwj0s5wdKbr3F7Tk_VByathw92hChI1SL4HWPxpNbzeYkUjssjfppEkYP1OMQy5_rUwM-Crfex8E0">
+
+<p>
+You've selected <span id="numberofpeople3">0</span> people in the third image.
+</p>
+
+<!-- This code is image 4 -->
+
+<img id="theimage4" src="https://lh4.googleusercontent.com/aDzsuElSoopOTpdMu6chvJ-ALvtpN4JPyCw-5og8qcIxZJIwEm0yYz1uNalr8BD_C7ZySB1767FxIYTn5bUyXsYQua40OnigDbCaio2Po_qjlPb4xre0qSbXlZ9_E7xy">
+
+<p>
+You've selected <span id="numberofpeople4">0</span> people in the fourth image.
+</p>
+
+<!-- This code is image 5 -->
+
+<img id="theimage5" src="https://lh6.googleusercontent.com/VXEiyHheBYJ-xCdIRaFzD8s60GZcCXn-2kmQmsAizsLUoQn5oPdnbhsnCeje7Yx93ltvdwclkbSxFiWLYIBmdBT_SQ-wNWGFlU43ffTPwe2boixEwtbsjJVaNJV10BNY">
+
+<p>
+You've selected <span id="numberofpeople5">0</span> people in the fifth image.
+</p>
+
+<!-- This code is image 6 -->
+
+<img id="theimage6" src="https://lh4.googleusercontent.com/RrlsYOqwv_90Avm-U5D_qMf8aPKuORL291fD8Xlw3FArL-GZ9ijeMR65tZfEwqRF9OSHs5r0szGki8hX8ahCeB0cTcI0r0QUSZyPrtE18wn_3WMYgi3UlbRycRIFtO7SwrNBruA">
+
+<p>
+You've selected <span id="numberofpeople6">0</span> people in the sixth image.
+</p>
+
+<!-- This code is image 7 -->
+
+<img id="theimage7" src="https://i.pinimg.com/736x/f4/29/25/f429251be8b36588c2e49e21661953f5--butterfly-children-chubby-babies.jpg">
+
+<p>
+You've selected <span id="numberofpeople7">0</span> people in the seventh image.
+</p>
+
 
 <form id="mturk_form">
 <p>
   <input id="numclickfield" type="hidden" name="numclicks">
   <input id="numkeydowns" type="hidden" name="keydowns">
   <input id="numberofpeoplefield" type="hidden" name="numberofpeople">
+  <input id="numberofpeoplefield2" type="hidden" name="numberofpeople2">
+  <input id="numberofpeoplefield3" type="hidden" name="numberofpeople3">
+  <input id="numberofpeoplefield4" type="hidden" name="numberofpeople4">
+  <input id="numberofpeoplefield5" type="hidden" name="numberofpeople5">
+  <input id="numberofpeoplefield6" type="hidden" name="numberofpeople6">
+  <input id="numberofpeoplefield7" type="hidden" name="numberofpeople7">
   <input id="history" type="hidden" name="history">
-  <input type="submit" name="Submit Joke">
+  <input type="submit" name="Number of People">
 </p>
+</form>
+<script type="text/javascript">
+
+</script>
 </body>
 </html>
